@@ -1,31 +1,58 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title> Mass Mail Dispatcher</title>
 </head>
 
 <body>
-    <div>
-        <form>
-            <label for="fileBtn">Upload CSV File:</label><br>
-            <input type="file" id="fileBtn" /><br>
-            <label for="subject">Subject of Email</label><br>
-            <input type="text" id="subject" /><br>
-            <label for="msg">Email Content</label><br>
-            <textarea id="msg"></textarea><br>
-            <input type="button" id="submitBtn" value="Submit" /><br>
-        </form>
-    </div>
-    <div id="valid">
-        <h1>Valid emails</h1>
-    </div>
-    <div id="invalid">
-        <h1>Invalid emails</h1>
-    </div>
-    <div>
-        <input type="button" id="continue" value="Final Submit" />
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.pngrepo.com/png/171135/512/email.png" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Mass Mail Dispatcher
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="fileBtn">Upload CSV File:</label><br>
+                    <input type="file" id="fileBtn" class="form-control" /><br>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject of Email</label><br>
+                    <input type="text" id="subject" class="form-control" /><br>
+                </div>
+                <div class="form-group">
+                    <label for="msg">Email Content</label><br>
+                    <textarea id="msg" placeholder="Type your message here" class="form-control"></textarea><br>
+                </div>
+                <input type="button" id="submitBtn" value="Submit" class="btn btn-primary" /><br>
+            </form>
+        </div>
+        <div class="row" id="validInvalid">
+            <div id="valid" class="col">
+                <h2>Valid emails</h2>
+            </div>
+            <div id="invalid" class="col">
+                <h2>Invalid emails</h2>
+            </div>
+        </div>
+        <div>
+            <input type="button" id="continue" value="Final Submit" class="btn btn-success" />
+        </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
